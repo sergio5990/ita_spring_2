@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class SpringTest {
 
-    //1
+    //factory method
 
     @Test
     void factoryMethodTestXml() {
@@ -29,7 +29,7 @@ class SpringTest {
         bean.perform();
     }
 
-    //2
+    //constructor params
 
     @Test
     void constructorTestXml() {
@@ -47,7 +47,7 @@ class SpringTest {
         bean.perform();
     }
 
-    //3
+    //scope
 
     @Test
     void scopeTestXml() {
@@ -65,7 +65,7 @@ class SpringTest {
         bean.perform();
     }
 
-    //4
+    //init and destroy methods
 
     @Test
     void initDestroyTestXml() {
@@ -85,7 +85,7 @@ class SpringTest {
         context.close();
     }
 
-    //5
+    //init and destroy interface
 
     @Test
     void initDestroy2TestXml() {
@@ -105,7 +105,7 @@ class SpringTest {
         context.close();
     }
 
-    //6
+    //parameters
 
     @Test
     void paramsTestXml() {
@@ -131,7 +131,7 @@ class SpringTest {
         context.close();
     }
 
-    //7
+    // parameter as bean
 
     @Test
     void paramsBeanTestXml() {
@@ -155,7 +155,7 @@ class SpringTest {
         context.close();
     }
 
-    //8
+    // property as list
 
     @Test
     void propsTestXml() {
@@ -174,8 +174,8 @@ class SpringTest {
         context.close();
     }
 
-    //9
-
+    // spel
+    // !!! NO GOD! PLEASE NO!!! NOOOOOOOOOO https://www.youtube.com/watch?v=umDr0mPuyQc
     @Test
     void spelTestXml() {
         final ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spel.xml");
