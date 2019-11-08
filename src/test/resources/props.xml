@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- bean definitions here -->
+
+    <bean id="props" class="com.sergio5990.ita.spring2.model.Props">
+        <property name="itemCollection">
+            <list>
+                <value>sergey</value>
+                <value>sasha</value>
+                <value>pasha</value>
+            </list>
+        </property>
+
+        <property name="itemList">
+            <list>
+                <value>sergey1</value>
+                <value>sasha1</value>
+                <!--                <ref></ref>-->
+                <!--                <bean></bean>-->
+                <value>pasha1</value>
+            </list>
+        </property>
+
+        <property name="itemSet">
+            <set>
+                <value>sergey2</value>
+                <value>sasha2</value>
+                <value>pasha2</value>
+            </set>
+        </property>
+
+
+        <property name="itemMap">
+            <map>
+                <entry key="1" value="sergey3"/>
+                <entry key="2" value="sergey31"/>
+                <entry key="3" value="sergey32"/>
+            </map>
+        </property>
+
+        <property name="itemProps">
+            <props>
+                <prop key="1">sergey4</prop>
+                <prop key="2">sergey41</prop>
+                <prop key="3">sergey42</prop>
+            </props>
+        </property>
+
+<!--        <property name="itemProps">-->
+<!--            <null/>-->
+<!--        </property>-->
+
+    </bean>
+
+
+</beans>
