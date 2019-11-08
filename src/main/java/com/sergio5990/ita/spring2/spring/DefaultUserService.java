@@ -1,7 +1,6 @@
 package com.sergio5990.ita.spring2.spring;
 
 import com.sergio5990.ita.spring2.User;
-import org.springframework.beans.factory.annotation.Autowired;
 
 public class DefaultUserService {
 

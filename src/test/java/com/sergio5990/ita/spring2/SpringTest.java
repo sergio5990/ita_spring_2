@@ -102,6 +102,7 @@ class SpringTest {
         context.refresh();
         final PersonInitDestroy2 bean = context.getBean(PersonInitDestroy2.class);
         bean.perform();
+
         context.close();
     }
 
@@ -112,7 +113,7 @@ class SpringTest {
         final ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("params.xml");
         final PersonParams bean1 = (PersonParams) context.getBean("person");
         final PersonParams bean2 = (PersonParams) context.getBean("person2");
-        final PersonParams bean3 = (PersonParams) context.getBean("person2");
+        final PersonParams bean3 = (PersonParams) context.getBean("person3");
         bean1.perform();
         bean2.perform();
         bean3.perform();

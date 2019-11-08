@@ -18,6 +18,7 @@ public class PersonInitDestroy2 implements DisposableBean, InitializingBean {
         System.out.println("Hello:" + name);
     }
 
+    @Override
     public void afterPropertiesSet() {
         System.out.println("я  создался");
     }

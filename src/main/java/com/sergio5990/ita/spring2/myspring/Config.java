@@ -5,15 +5,20 @@ import com.sergio5990.ita.spring2.User;
 public class Config {
 
     public static void main(String[] args) {
-        final DefaultUserService defaultUserService = getDefaultUserService();
+
+        //config
+        final UserDao userDao = defaultUserDao();
+        final DefaultUserService defaultUserService = defaultUserService(userDao);
+
+        //logic
         defaultUserService.save(new User());
     }
 
-    private static DefaultUserService getDefaultUserService() {
-        return new DefaultUserService(getUserDao());
+    private static DefaultUserService defaultUserService(UserDao userDao) {
+        return new DefaultUserService(userDao);
     }
 
-    private static UserDao getUserDao() {
+    private static UserDao defaultUserDao() {
         return new DefaultUserDao();
     }
 }
